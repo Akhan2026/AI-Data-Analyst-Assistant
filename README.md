@@ -23,7 +23,6 @@ AI_Data_Analyst_Assistant/
 ├── app.py                 # Главный файл Streamlit
 ├── requirements.txt       # Зависимости
 ├── README.md              # Документация
-├── .env                   # API ключ (не попадает в Git)
 ├── .gitignore
 └── src/
     ├── analyzer.py        # Анализ данных (EDA)
