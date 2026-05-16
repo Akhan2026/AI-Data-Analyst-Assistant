@@ -15,3 +15,22 @@
 | 🤖 **Машинное обучение** | Регрессия / классификация (Random Forest), метрики, предсказания |
 | 📋 **Отчёты** | Экспорт анализа в Markdown / HTML |
 | 📥 **Экспорт** | Скачать очищенные данные (CSV), метрики (JSON), отчёты |
+
+
+## 📂 Структура проекта
+AI_Data_Analyst_Assistant/
+├── app.py
+├── requirements.txt
+├── README.md
+├── .env
+├── .gitignore
+└── src/
+    ├── analyzer.py
+    ├── visualizer.py
+    ├── llm_interface.py
+    ├── report_generator.py
+    ├── ml_summary.py
+    └── feature_engineering.py
+
+
+
