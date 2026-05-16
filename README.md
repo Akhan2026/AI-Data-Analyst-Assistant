@@ -18,19 +18,21 @@
 
 
 ## 📂 Структура проекта
+```plain
 AI_Data_Analyst_Assistant/
-├── app.py
-├── requirements.txt
-├── README.md
-├── .env
+├── app.py                 # Главный файл Streamlit
+├── requirements.txt       # Зависимости
+├── README.md              # Документация
+├── .env                   # API ключ (не попадает в Git)
 ├── .gitignore
 └── src/
-    ├── analyzer.py
-    ├── visualizer.py
-    ├── llm_interface.py
-    ├── report_generator.py
-    ├── ml_summary.py
-    └── feature_engineering.py
+    ├── analyzer.py        # Анализ данных (EDA)
+    ├── visualizer.py      # Визуализации
+    ├── llm_interface.py   # Groq AI (вопросы)
+    ├── report_generator.py # Отчёты (MD/HTML)
+    ├── ml_summary.py      # ML модели и метрики
+    └── feature_engineering.py # Создание новых признаков
+
 
 
 
