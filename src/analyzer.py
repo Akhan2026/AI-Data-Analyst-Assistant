@@ -121,7 +121,14 @@ class DataAnalyzer:
 
     def clean_data(self):
         df_clean = self.df.copy()
+
         for col in df_clean.columns:
+            # Пытаемся преобразовать в числа, если возможно
+            try:
+                df_clean[col] = pd.to_numeric(df_clean[col])
+            except:
+                pass
+
             if df_clean[col].dtype in ['float64', 'int64']:
                 if df_clean[col].isnull().any():
                     df_clean[col].fillna(df_clean[col].median(), inplace=True)
@@ -130,6 +137,7 @@ class DataAnalyzer:
                     mode_val = df_clean[col].mode()
                     if not mode_val.empty:
                         df_clean[col].fillna(mode_val[0], inplace=True)
+
         df_clean = df_clean.drop_duplicates()
         return df_clean
 
