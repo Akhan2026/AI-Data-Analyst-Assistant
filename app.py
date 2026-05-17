@@ -38,6 +38,8 @@ def main():
             analysis = analyzer.run_full_analysis()
         
         df_clean = analyzer.clean_data()
+        st.write("🔍 Пропусков ДО очистки:", df.isnull().sum().sum())
+        st.write("🔍 Пропусков ПОСЛЕ очистки:", df_clean.isnull().sum().sum())
         
         tabs = st.tabs(["📊 Обзор", "📈 Визуализации", "🤖 AI Вопросы", "🛠️ Feature Engineering", "🤖 ML Задача", "📋 Отчёт"])
         
